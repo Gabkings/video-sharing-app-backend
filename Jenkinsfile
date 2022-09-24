@@ -6,7 +6,7 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('error') {
       steps {
         git(url: 'https://github.com/Gabkings/video-sharing-app-backend', branch: 'main')
       }
