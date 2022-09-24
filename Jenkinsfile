@@ -13,6 +13,15 @@ pipeline {
     }
 
     stage('build') {
+      agent {
+        node {
+          label 'Checkout code'
+        }
+
+      }
+      environment {
+        build = 'build-test'
+      }
       steps {
         sh ' sh \'docker build -f Dockerfile -t gabkings/video-api:latest .\''
       }
