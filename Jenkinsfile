@@ -12,6 +12,12 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh ' sh \'docker build -f Dockerfile -t gabkings/video-api:latest .\''
+      }
+    }
+
   }
   environment {
     step = 'step-test'
